@@ -88,35 +88,59 @@
     transform: translateY(-2px);
 }
 
-        footer {
-            background-color: #A50034;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: 30px;
-        }
-        footer {
-    background-color: #A50034;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+.navbar {
+    background-color: #A50034 !important;
 }
 
-.footer-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.navbar-brand {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
     padding: 10px;
 }
 
-.footer-section {
-    margin: 10px;
+.navbar-nav .nav-link:hover {
+    color: #F5F5F5 !important;
+}
+
+.newsletter-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #F5F5F5;
+    margin-top: 30px;
+    border-radius: 8px;
+}
+
+.btn-newsletter {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #C72C41;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-newsletter:hover {
+    background-color: #A50034;
+}
+
+.footer {
+    background-color: #A50034;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
 }
 
 .footer-section h4 {
     font-size: 18px;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .footer-section ul {
@@ -128,19 +152,34 @@
     margin: 5px 0;
 }
 
-.footer-section ul li a, .social-icons a {
+.footer-section ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-.footer-section ul li a:hover, .social-icons a:hover {
+.footer-section ul li a:hover {
     text-decoration: underline;
 }
     </style>
 </head>
 <body>
-
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">PIMTECH</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://github.com/PaoloIbanez?tab=repositories">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="newsletter.html">Newsletter</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
     <!-- Header Section -->
     <div class="container">
         <div class="newsletter-header">
@@ -209,31 +248,34 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-        <div class="footer-section">
-            <h4>Quick Links</h4>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="newsletter.html">Newsletter</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
+        <!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <!-- Quick Links -->
+            <div class="col-md-6 footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="https://github.com/PaoloIbanez?tab=repositories">Projects</a></li>
+                    <li><a href="newsletter.html">Newsletter</a></li>
+                </ul>
+            </div>
 
-        <div class="footer-section">
-            <h4>Contact</h4>
-            <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/paolo-ibañez-medina" target="_blank">LinkedIn</a>
-                <a href="https://github.com/PaoloIbanez" target="_blank">GitHub</a>
-                <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
+            <!-- Contact Section -->
+            <div class="col-md-6 footer-section">
+                <h4>Contact</h4>
+                <p>Email: <a href="mailto:paolochamba@gmail.com">paolochamba@gmail.com</a></p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/paolo-ibañez-medina" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/PaoloIbanez" target="_blank">GitHub</a>
+                </div>
             </div>
         </div>
+        <p class="text-center">&copy; 2025 PIMTECH | Built by Paolo Ibanez</p>
     </div>
-        <p>&copy; 2025 PIMTECH | Built by Paolo Ibanez</p>
-    </footer>
+</footer>
+
 
 </body>
 </html>
