@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience | PIMTECH</title>
+
+    <!-- Google fonts for brand -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Lora:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <style>
+        /* Global Styles I have */
+        body {
+            background-color: #FFFFFF;
+            font-family: 'Lora', serif;
+            color: #A50034;
+        }
+
+        p {
+            color: #000000;
+        }
+
+        .hero p, .footer p {
+            color: #FFFFFF !important;
+        }
+
+        .navbar {
+            background-color: #A50034 !important;
+        }
+
+        .navbar-brand {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 18px;
+            padding: 10px;
+            color: white !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #F5F5F5 !important;
+        }
+
+
+        .experience-section {
+            padding: 50px 0;
+        }
+
+        .section-title {
+            color: #C72C41;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 36px;
+        }
+
+        .accordion-button {
+            background-color: #F5F5F5;
+            color: #A50034;
+            border: 1px solid #C72C41;
+            font-weight: bold;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #C72C41;
+            color: white;
+        }
+
+        .accordion-item {
+            border: none;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            background-color: #A50034;
+            color: white !important;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .footer-section a {
+            color: white !important;
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            color: #F5F5F5 !important;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">PIMTECH</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://github.com/PaoloIbanez?tab=repositories">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="newsletter.html">Newsletter</a></li>                 
+                    <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Experience Section -->
+    <section class="experience-section container">
+        <h2 class="section-title">My Experience</h2>
+        <p class="text-center mb-5">Discover my educational and professional journey with highlights of my skills and expertise.</p>
+
+        <h3>Education</h3>
+        <div class="accordion" id="educationAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                        Bachelor's Degree in Information Technology & Business Administration
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#educationAccordion">
+                    <div class="accordion-body">
+                        Mount Aloysius College, Pennsylvania. Specialization in Supply Chain Management, Graduating in December 2025.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                        High School Diploma
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#educationAccordion">
+                    <div class="accordion-body">
+                        Completed at a high school in Tenerife, Spain, focusing on Business Administration.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="mt-5">Professional Experience</h3>
+        <div class="accordion" id="experienceAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                        Cyber Threat Intelligence Analyst
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
+                    <div class="accordion-body">
+                        Working on intelligence gathering on adversarial threats targeting US democratic institutions and nation-state actors.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <!-- Quick Links -->
+            <div class="col-md-6 footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="https://github.com/PaoloIbanez?tab=repositories">Projects</a></li>
+                    <li><a href="newsletter.html">Newsletter</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+
+                </ul>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="col-md-6 footer-section">
+                <h4>Contact</h4>
+                <p>Email: <a href="mailto:paolochamba@gmail.com">paolochamba@gmail.com</a></p>
+                <div class="social-icons">
+                    <a href="www.linkedin.com/in/paolo-ibáñez-medina" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/PaoloIbanez" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+        <p class="text-center">&copy; 2025 PIMTECH | Built by Paolo Ibanez</p>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
