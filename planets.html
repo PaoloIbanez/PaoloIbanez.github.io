@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Planets Array</title>
+</head>
+<body>
+  <h1>Planets in the Solar System</h1>
+  <ul id="planet-list"></ul>
+
+  <script>
+    let planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'];
+    
+    const numberOfPlanets = planets.length;// this is to skip the process of counting how many there are and if we add one or change it the number of planets won't have to be changed by me
+    
+    const planetList = document.getElementById("planet-list");
+
+    for (let i = 0; i <= numberOfPlanets; i++) {
+      const listItem = document.createElement("li");
+      listItem.textContent = planets[i];
+      planetList.appendChild(listItem);}
+    //planets.forEach(planet => document.write('<li>' + planet + '</li>'));
+  </script>
+</body>
+</html>
