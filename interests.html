@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Focus Areas | PIMTECH</title>
+    <script src="script.js"></script>
+    <script>getHead();</script>
+
+    <style>
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, #C72C41, #A50034);
+            color: #fff !important;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 0;
+        }
+
+        /* Main Container */
+        .interests-container {
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+
+        /* Card styling for the entire form section */
+        .interests-card {
+            max-width: 650px;
+            margin: 0 auto;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .interests-card .card-body {
+            padding: 30px;
+        }
+
+        /* Floating label container alignment */
+        .floating-label-container {
+            max-width: 300px;
+            margin: 0 auto; 
+            margin-bottom: 20px;
+        }
+
+        /* The dynamic content card – no border, subtle box shadow, hover animation */
+        #focusContent .card {
+            border: none; /* Remove thick border */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        #focusContent .card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Card header background color & text styling */
+        #focusContent .card-header {
+            background-color: #f8f9fa; 
+            font-weight: bold;
+            color: #A50034;          
+        }
+        /* Body text inside the card */
+        #focusContent .card-body {
+            background-color: #fff;
+            color: #000;
+        }
+        /* Heading color inside the card body */
+        #focusContent h3 {
+            color: #C72C41;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header (Navbar) -->
+<script>getHeader();</script>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Explore My Focus Areas</h1>
+    <p>Learn about what I'm passionate about!</p>
+</section>
+
+<!-- Main Content -->
+<div class="container interests-container">
+    <div class="card interests-card">
+        <div class="card-body">
+
+            <h2 class="text-center mb-4">Pick an Interest</h2>
+            <p class="text-center">Select one of my areas of focus below to see a quick overview.</p>
+
+            <!-- Floating Label Select -->
+            <div class="form-floating floating-label-container">
+                <select 
+                  id="focusSelect" 
+                  class="form-select" 
+                  onchange="showFocusDetails()"
+                >
+                    <option value="">Select One</option>
+                    <option value="cyber">Cybersecurity</option>
+                    <option value="webdev">Web Development</option>
+                    <option value="supplychain">Supply Chain</option>
+                    <option value="ecommerce">E-commerce</option>
+                </select>
+                <label for="focusSelect">Choose a Topic</label>
+            </div>
+
+            <!-- Dynamic Content Output -->
+            <div id="focusContent"></div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<script>getFooter();</script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+/**
+ * showFocusDetails():
+ * Runs automatically when user changes the dropdown (onchange).
+ * It inserts relevant HTML into #focusContent, 
+ * displayed in a Bootstrap card format.
+ */
+function showFocusDetails() {
+  const choice = document.getElementById("focusSelect").value;
+  const contentDiv = document.getElementById("focusContent");
+
+  // Clear old content
+  contentDiv.innerHTML = "";
+
+  // If no choice, we'll just bail out
+  if (!choice) {
+    return;
+  }
+
+  let header = "";
+  let body = "";
+
+  if (choice === "cyber") {
+    header = "Cybersecurity";
+    body = `
+      <h3>Cybersecurity</h3>
+      <p>I have practical experience in Threat Intelligence, OSINT techniques,
+      and dark web investigations. Check out my 
+      <a href="experience.html">professional journey</a> for more!</p>`;
+  } else if (choice === "webdev") {
+    header = "Web Development";
+    body = `
+      <h3>Web Development</h3>
+      <p>I enjoy learning and building responsive websites using HTML, CSS, JS, Python
+      and frameworks like Bootstrap. Visit my <a href="index.html">Home Page</a>
+      or my <a href="https://github.com/PaoloIbanez" target="_blank">GitHub</a>
+      for examples of my work.</p>`;
+  } else if (choice === "supplychain") {
+    header = "Supply Chain";
+    body = `
+      <h3>Supply Chain</h3>
+      <p>Currently specializing in Supply Chain Management at Mount Aloysius.
+      I've built an Excel & MySQL inventory system for 13,000+ products.
+      Check out my <a href="experience.html">Experience page</a> to learn more.</p>`;
+  } else if (choice === "ecommerce") {
+    header = "E-commerce";
+    body = `
+      <h3>E-commerce</h3>
+      <p>I co-own 
+      <a href="https://www.hispanicanima.com" target="_blank">Hispanic Anima</a>,
+      ensuring a secure and user-friendly online store.
+      It's built on WordPress with custom strategies for marketing & SEO.</p>`;
+  }
+
+  // Build the result as a Bootstrap card
+  const resultHtml = `
+    <div class="card">
+      <div class="card-header">
+        ${header}
+      </div>
+      <div class="card-body">
+        ${body}
+      </div>
+    </div> `;
+  contentDiv.innerHTML = resultHtml;
+}
+</script>
+
+</body>
+</html>
