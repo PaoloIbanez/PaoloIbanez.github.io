@@ -1,1 +1,116 @@
 
+/* Base Body Style */
+body {
+    background-color: #FFFFFF;
+    font-family: 'Lora', serif;
+    color: #A50034; /* brand burgundy */
+    margin: 0; /* remove default margin for a cleaner look */
+    padding: 0;
+}
+
+p {
+    color: #000000;
+}
+
+/* Navbar (Shared) */
+.navbar {
+    background-color: #A50034 !important;
+}
+.navbar-brand {
+    font-size: 22px;
+    font-weight: bold;
+}
+.navbar-nav .nav-link {
+    font-size: 18px;
+    padding: 10px;
+}
+.navbar-nav .nav-link:hover {
+    color: #F5F5F5 !important;
+}
+
+/* Footer (Shared) */
+.footer {
+    background-color: #A50034;
+    color: white !important;
+    padding: 30px 0;
+    text-align: center;
+}
+.footer-section h4 {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.footer-section a,
+.footer-section .social-icons a {
+    color: white !important;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+.footer-section a:hover,
+.footer-section .social-icons a:hover {
+    color: #F5F5F5;
+    text-decoration: underline;
+}
+
+/* Cards (often used in multiple pages) */
+.card {
+    background-color: #F5F5F5;
+    border: none;
+    transition: transform 0.3s;
+}
+.card:hover {
+    transform: scale(1.02);
+    background-color: #D9D9D9;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #C72C41;
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #A50034;
+}
+
+/* Example .newsletter-section (multiple pages) */
+.newsletter-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #F5F5F5;
+    margin-top: 30px;
+    border-radius: 8px;
+}
+.btn-newsletter {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #C72C41;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background 0.3s ease-in-out;
+}
+.btn-newsletter:hover {
+    background-color: #A50034;
+}
+
+/* Example Hero (commonly reused) */
+.hero {
+    background: linear-gradient(to right, #C72C41, #A50034);
+    color: #FFFFFF !important;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero p, .footer p {
+    color: #FFFFFF !important;
+}
+
+/* Optionally: Shared Section Title */
+.section-title {
+    color: #C72C41;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
