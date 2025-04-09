@@ -68,6 +68,8 @@ function getFooter() {
                             <li><a href="https://github.com/PaoloIbanez?tab=repositories">Projects</a></li>
                             <li><a href="newsletter.html">Newsletter</a></li>
                             <li><a href="experience.html">Experience</a></li>
+                            <li><a href="interests.html">Interests</a></li>
+
                         </ul>
                     </div>
 
