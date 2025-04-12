@@ -6,6 +6,26 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+/* more index file css */
+
+.about-box {
+    background-color: #F5F5F5;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+    margin-top: 40px;
+}
+
+.about-img-box {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 3px solid #C72C41;
+}
+
+
 /* Base Body Style */
 body {
     background-color: #FFFFFF;
