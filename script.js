@@ -49,6 +49,8 @@ function getHeader() {
                         <li class="nav-item"><a class="nav-link" href="newsletter.html">Newsletter</a></li>
                         <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
                         <li class="nav-item"><a class="nav-link" href="interests.html">Interests</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tracker.html">Goal Tracker</a></li>
+
                     </ul>
                 </div>
             </div>
@@ -69,6 +71,8 @@ function getFooter() {
                             <li><a href="newsletter.html">Newsletter</a></li>
                             <li><a href="experience.html">Experience</a></li>
                             <li><a href="interests.html">Interests</a></li>
+                            <li><a href="tracker.html">Goal Tracker</a></li>
+
 
                         </ul>
                     </div>
