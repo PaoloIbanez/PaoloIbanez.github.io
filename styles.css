@@ -78,6 +78,13 @@ p {
     text-decoration: underline;
 }
 
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
 /* Cards (often used in multiple pages) */
 .card {
     background-color: #F5F5F5;
