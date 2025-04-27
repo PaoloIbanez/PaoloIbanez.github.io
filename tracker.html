@@ -113,22 +113,22 @@
 
   <!-- JS LOGIC-->
   <script>
-  /*State Variables (persisted in browser localStorage) */
+  /* we use this key name to save and load progress on the browser local storage */
   const STORAGE_KEY = "pimtech_weekly_goal";
 
-  /*readState() returns the saved object or defaults */
+  /*readState() returns the saved object or defaults*/
   function readState() {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return { goalHours: 0, currentHours: 0 };
     return JSON.parse(raw);
   }
 
-  /*saveState(stateObj) -> writes object to localStorage*/
+  /*saveState(stateObj) writes object to local storage of the browser*/
   function saveState(state) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
   }
 
-  /*setGoal() -> triggered when user clicks "Save Goal".*/
+  /*setGoal() triggered when user clicks "Save Goal" and basically saves the goal that user input*/
   function setGoal() {
     const hours = parseFloat(document.getElementById("goalInput").value);
     if (!hours || hours <= 0) {
@@ -140,7 +140,7 @@
     updateUI();
   }
 
-  /*addProgress() -> adds daily coded hours to currentHours. */
+  /*addProgress()  when the user adds daily coded hours it adds to current hours. */
   function addProgress() {
     const add = parseFloat(document.getElementById("progressInput").value);
     if (!add || add <= 0) {
@@ -158,7 +158,7 @@
     document.getElementById("progressInput").value = ""; // clear field
   }
 
-  /*resetTracker() -> clears progress & goal for a fresh week.*/
+  /*resetTracker() clears progress & goal for a new week.*/
   function resetTracker() {
     if (confirm("Reset your weekly tracker?")) {
       localStorage.removeItem(STORAGE_KEY);
@@ -166,7 +166,7 @@
     }
   }
 
-  /*updateUI() -> reads state and updates progress bar & text*/
+  /*updateUI() reads state and updates progress bar & text*/
   function updateUI() {
     const { goalHours, currentHours } = readState();
     const progressBar = document.getElementById("progressBar");
@@ -190,6 +190,7 @@
       : "Goal achieved! Great job.";
   }
 
+    // updates the progress bar and text based on the goal and progress we have
   updateUI(); 
   </script>
 
