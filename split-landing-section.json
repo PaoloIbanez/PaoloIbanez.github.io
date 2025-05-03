@@ -1,0 +1,111 @@
+[
+  {
+    "id": "split-landing",
+    "elType": "section",
+    "isInner": false,
+    "settings": {
+      "structure": "50",
+      "content_width": "full",
+      "layout": "boxed",
+      "height": "full",
+      "html_tag": "section",
+      "gap": "no"
+    },
+    "elements": [
+      {
+        "id": "column-left",
+        "elType": "column",
+        "settings": {
+          "_column_size": 50,
+          "background_background": "classic",
+          "background_image": {
+            "url": "https://example.com/your-hombre-image.jpg",
+            "id": ""
+          },
+          "background_position": "center center",
+          "background_size": "cover",
+          "background_repeat": "no-repeat",
+          "custom_css": ".elementor-column:hover:before{content:'';position:absolute;inset:0;background:rgba(0,0,0,0.25);transition:all .3s ease;} .elementor-column:before{content:'';position:absolute;inset:0;transition:all .3s ease;}",
+          "_element_custom_css": ""
+        },
+        "elements": [
+          {
+            "id": "heading-hombre",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+              "title": "Hombre",
+              "align": "center",
+              "text_color": "#FFFFFF",
+              "typography_typography": "custom",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 24
+              },
+              "margin": {
+                "top": "0",
+                "right": "0",
+                "bottom": "40",
+                "left": "0",
+                "isLinked": false
+              },
+              "link": {
+                "url": "https://yourstore.com/tienda/hombre",
+                "is_external": false,
+                "nofollow": false
+              }
+            },
+            "elements": []
+          }
+        ]
+      },
+      {
+        "id": "column-right",
+        "elType": "column",
+        "settings": {
+          "_column_size": 50,
+          "background_background": "classic",
+          "background_image": {
+            "url": "https://example.com/your-mujer-image.jpg",
+            "id": ""
+          },
+          "background_position": "center center",
+          "background_size": "cover",
+          "background_repeat": "no-repeat",
+          "custom_css": ".elementor-column:hover:before{content:'';position:absolute;inset:0;background:rgba(0,0,0,0.25);transition:all .3s ease;} .elementor-column:before{content:'';position:absolute;inset:0;transition:all .3s ease;}",
+          "_element_custom_css": ""
+        },
+        "elements": [
+          {
+            "id": "heading-mujer",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+              "title": "Mujer",
+              "align": "center",
+              "text_color": "#FFFFFF",
+              "typography_typography": "custom",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 24
+              },
+              "margin": {
+                "top": "0",
+                "right": "0",
+                "bottom": "40",
+                "left": "0",
+                "isLinked": false
+              },
+              "link": {
+                "url": "https://yourstore.com/tienda/mujer",
+                "is_external": false,
+                "nofollow": false
+              }
+            },
+            "elements": []
+          }
+        ]
+      }
+    ]
+  }
+]
