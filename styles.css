@@ -30,7 +30,7 @@ body {
     font-family: 'Lora', serif;
     color: #A50034; /* brand burgundy */
     margin: 0; /* remove default margin for a cleaner look */
-    padding: 0;
+    padding: 70px 0 0; /* space for fixed navbar */
 }
 
 p {
@@ -40,6 +40,7 @@ p {
 /* Navbar (Shared) */
 .navbar {
     background-color: #A50034 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 .navbar-brand {
     font-size: 22px;
@@ -89,20 +90,24 @@ p {
 .card {
     background-color: #F5F5F5;
     border: none;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    transform-style: preserve-3d;
 }
 .card:hover {
-    transform: scale(1.02);
+    transform: scale(1.05) rotateY(10deg);
     background-color: #D9D9D9;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 /* Buttons */
 .btn-primary {
     background-color: #C72C41;
     border: none;
+    transition: transform 0.3s;
 }
 .btn-primary:hover {
     background-color: #A50034;
+    transform: scale(1.05);
 }
 
 /* Example .newsletter-section (multiple pages) */
@@ -133,6 +138,13 @@ p {
     color: #FFFFFF !important;
     padding: 80px 20px;
     text-align: center;
+    perspective: 800px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.hero:hover {
+    transform: rotateX(5deg);
 }
 
 .hero p, .footer p {
