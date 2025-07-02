@@ -45,15 +45,15 @@ function getHeader() {
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="https://github.com/PaoloIbanez?tab=repositories">Projects</a></li>
                         <li class="nav-item"><a class="nav-link" href="newsletter.html">Newsletter</a></li>
                         <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
                         <li class="nav-item"><a class="nav-link" href="interests.html">Interests</a></li>
                         <li class="nav-item"><a class="nav-link" href="tracker.html">Goal Tracker</a></li>
-
                     </ul>
+                    <button id="darkToggle" class="btn btn-sm btn-outline-light ms-lg-3" type="button">Dark Mode</button>
                 </div>
             </div>
         </nav>
@@ -92,4 +92,20 @@ function getFooter() {
             </div>
         </footer>
     `);
+}
+
+function setupDarkMode() {
+    const toggle = document.getElementById('darkToggle');
+    if (!toggle) return;
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+        document.body.classList.add('dark-mode');
+    }
+    toggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        if (document.body.classList.contains('dark-mode')) {
+            localStorage.setItem('dark-mode', 'enabled');
+        } else {
+            localStorage.setItem('dark-mode', 'disabled');
+        }
+    });
 }

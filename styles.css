@@ -8,11 +8,14 @@
 /* more index file css */
 
 .about-box {
-    background-color: #F5F5F5;
+    background: rgba(255, 255, 255, 0.25);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.05);
     margin-top: 40px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.3);
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .about-img-box {
@@ -31,6 +34,7 @@ body {
     color: #A50034; /* brand burgundy */
     margin: 0; /* remove default margin for a cleaner look */
     padding: 70px 0 0; /* space for fixed navbar */
+    transition: background-color 0.3s, color 0.3s;
 }
 
 p {
@@ -88,14 +92,16 @@ p {
 
 /* Cards (often used in multiple pages) */
 .card {
-    background-color: #F5F5F5;
+    background: rgba(255, 255, 255, 0.25);
     border: none;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
     transform-style: preserve-3d;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.3);
 }
 .card:hover {
     transform: scale(1.05) rotateY(10deg);
-    background-color: #D9D9D9;
+    background-color: rgba(255,255,255,0.35);
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
@@ -103,11 +109,12 @@ p {
 .btn-primary {
     background-color: #C72C41;
     border: none;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 .btn-primary:hover {
     background-color: #A50034;
     transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 /* Example .newsletter-section (multiple pages) */
@@ -134,7 +141,9 @@ p {
 
 /* Example Hero (commonly reused) */
 .hero {
-    background: linear-gradient(to right, #C72C41, #A50034);
+    background: linear-gradient(-45deg, #C72C41, #A50034, #C72C41);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
     color: #FFFFFF !important;
     padding: 80px 20px;
     text-align: center;
@@ -147,6 +156,12 @@ p {
     transform: rotateX(5deg);
 }
 
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 .hero p, .footer p {
     color: #FFFFFF !important;
 }
@@ -157,4 +172,25 @@ p {
     font-weight: bold;
     text-align: center;
     margin-bottom: 30px;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #FFFFFF;
+}
+body.dark-mode .navbar,
+body.dark-mode .footer {
+    background-color: #A50034 !important;
+}
+body.dark-mode .card,
+body.dark-mode .about-box {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.2);
+}
+body.dark-mode p {
+    color: #FFFFFF;
+}
+body.dark-mode .btn-primary {
+    background-color: #C72C41;
 }
