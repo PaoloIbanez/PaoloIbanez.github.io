@@ -7,13 +7,6 @@
   <script>getHead();</script>
   <style>
     /*  LOCAL STYLES THAT ARENT IN THE TEMPLATE STYLE CSS FILE */
-    .hero {
-      /* brand gradient */
-      background: linear-gradient(135deg, #C72C41 0%, #A50034 100%);
-      color: #fff !important;
-      text-align: center;
-      padding: 80px 20px;
-    }
 
     /* glass‑morphism card */
     .tracker-card {
@@ -24,30 +17,6 @@
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
     }
 
-    /* neon button */
-    .btn-neon {
-      position: relative;
-      overflow: hidden;
-      background-color: #C72C41;
-      border: none;
-      color: #fff;
-      transition: color 0.3s ease-in-out;
-    }
-    .btn-neon::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -75%;
-      width: 50%;
-      height: 100%;
-      background: rgba(255, 255, 255, 0.3);
-      transform: skewX(-25deg);
-      transition: left 0.5s;
-    }
-    .btn-neon:hover::before {
-      left: 125%;
-    }
-    .btn-neon:hover { color: #C72C41; }
 
 
     /* progress and progress bar */
@@ -68,7 +37,7 @@
   <script>getHeader();</script>
 
   <!-- HERO SECTION -->
-  <section class="hero">
+  <section class="hero" data-aos="fade-up">
     <h1>Weekly Coding Goal Tracker</h1>
     <p>Set a goal, track your hours, and get better!</p>
   </section>
@@ -82,14 +51,14 @@
           <h3 class="mb-3 text-center" style="color:#A50034">1. Set Your Weekly Goal (hours)</h3>
           <div class="input-group mb-4">
             <input id="goalInput" type="number" min="1" class="form-control" placeholder="e.g., 10">
-            <button class="btn btn-neon" onclick="setGoal()">Save Goal</button>
+            <button class="btn btn-primary" onclick="setGoal()">Save Goal</button>
           </div>
 
           <!-- Progress input -->
           <h3 class="mb-3 text-center" style="color:#A50034">2. Add Progress</h3>
           <div class="input-group mb-4">
             <input id="progressInput" type="number" min="0.25" step="0.25" class="form-control" placeholder="Hours coded today">
-            <button class="btn btn-neon" onclick="addProgress()">Add</button>
+            <button class="btn btn-primary" onclick="addProgress()">Add</button>
           </div>
 
           <!-- Progress visualization -->
@@ -196,5 +165,9 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        AOS.init();
+        setupDarkMode();
+    </script>
 </body>
 </html>

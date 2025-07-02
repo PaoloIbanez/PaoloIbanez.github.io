@@ -109,12 +109,26 @@ p {
 .btn-primary {
     background-color: #C72C41;
     border: none;
+    border-radius: 6px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 .btn-primary:hover {
     background-color: #A50034;
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* General button style to keep transitions consistent */
+.btn {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.btn:hover {
+    transform: scale(1.03);
+}
+
+/* Section spacing for pages like experience */
+.experience-section {
+    padding: 50px 0;
 }
 
 /* Example .newsletter-section (multiple pages) */
@@ -124,19 +138,6 @@ p {
     background-color: #F5F5F5;
     margin-top: 30px;
     border-radius: 8px;
-}
-.btn-newsletter {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: #C72C41;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
-    transition: background 0.3s ease-in-out;
-}
-.btn-newsletter:hover {
-    background-color: #A50034;
 }
 
 /* Example Hero (commonly reused) */
@@ -193,4 +194,10 @@ body.dark-mode p {
 }
 body.dark-mode .btn-primary {
     background-color: #C72C41;
+}
+body.dark-mode .hero {
+    background: linear-gradient(-45deg, #A50034, #C72C41, #A50034);
+}
+body.dark-mode .newsletter-section {
+    background-color: rgba(255,255,255,0.1);
 }
