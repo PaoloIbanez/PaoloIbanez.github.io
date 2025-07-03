@@ -6,166 +6,14 @@
     <script>getHead();</script>
 
 
-    <style>
-        body {
-            background-color: #FFFFFF; 
-            font-family: 'Lora', serif;
-            color: #A50034; 
-        }
-
-
-p {
-    color: #000000;
-}
-
-.hero p, .footer p, .newsletter-header p {
-    color: white;
-}
-        
-.container {
-    max-width: 900px;
-    margin: 50px auto;
-}
-
-.newsletter-header {
-    text-align: center;
-    padding: 30px;
-    background: linear-gradient(to right, #C72C41, #A50034);
-    color: white;
-    border-radius: 5px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.article {
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-    padding: 20px;
-    border: 1px solid #C72C41;
-    border-radius: 5px;
-    background-color: #F5F5F5;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.article:hover {
-    transform: scale(1.02);
-}
-
-.article img {
-    width: 150px;
-    height: auto;
-    margin-right: 20px;
-    border-radius: 5px;
-}
-
-.article a {
-    color: #C72C41;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.article a:hover {
-    text-decoration: underline;
-}
-
-.see-more-btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #C72C41;
-    color: white !important;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 16px; 
-    text-align: center;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    border: 2px solid #C72C41;
-}
-
-.see-more-btn:hover {
-    background-color: #A50034;
-    color: white; 
-    border: 2px solid #A50034;
-    transform: translateY(-2px);
-}
-
-.navbar {
-    background-color: #A50034 !important;
-}
-
-.navbar-brand {
-    font-size: 22px;
-    font-weight: bold;
-}
-
-.navbar-nav .nav-link {
-    font-size: 18px;
-    padding: 10px;
-}
-
-.navbar-nav .nav-link:hover {
-    color: #F5F5F5 !important;
-}
-
-.newsletter-section {
-    text-align: center;
-    padding: 50px;
-    background-color: #F5F5F5;
-    margin-top: 30px;
-    border-radius: 8px;
-}
-
-.btn-newsletter {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: #C72C41;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    font-size: 18px;
-    transition: background 0.3s ease-in-out;
-}
-
-.btn-newsletter:hover {
-    background-color: #A50034;
-}
-
-.footer {
-    background-color: #A50034;
-    color: white;
-    padding: 30px 0;
-    text-align: center;
-}
-
-.footer-section h4 {
-    font-size: 18px;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-}
-
-.footer-section a,
-.footer-section .social-icons a {
-    color: white !important;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
-}
-.footer-section ul {
-    list-style: none;  
-    padding: 0;  
-    margin: 0; 
-}
-
-.footer-section a:hover,
-.footer-section .social-icons a:hover {
-    color: #F5F5F5; 
-    text-decoration: underline;
-}
-    </style>
+<style>
+.container { max-width: 900px; margin: 50px auto; }
+.newsletter-header { text-align: center; padding: 30px; }
+.article { display:flex; align-items:center; margin-bottom:30px; padding:20px; border:1px solid #C72C41; border-radius:5px; background-color:#F5F5F5; transition:transform 0.3s; }
+.article:hover { transform: scale(1.02); }
+.article a { color:#C72C41; font-weight:bold; text-decoration:none; }
+.article a:hover { text-decoration: underline; }
+</style>
 </head>
 <body>
 <!-- Navigation Bar -->
@@ -173,7 +21,7 @@ p {
 
     <!-- Header Section -->
     <div class="container">
-        <div class="newsletter-header">
+        <div class="newsletter-header hero" data-aos="fade-up">
             <h1>PIMTECH Newsletter</h1>
             <p>Insights on IT, Business, Programming, Web development, Cybersecurity, and more.</p>
         </div>
@@ -190,7 +38,7 @@ p {
             <h3><a target="_blank">
                 I Thought Coding Was Hard Until I Tried This...</a></h3>
             <p>Discover how coding became easier with the right mindset and approach.</p>
-            <a href="https://www.linkedin.com/pulse/i-thought-coding-hard-until-tried-paolo-ib%C3%A1%C3%B1ez-medina-efkpc/?trackingId=wNWQ8UgoQBqW%2BOrU5J48XQ%3D%3D" target="_blank" class="see-more-btn">See More</a>
+            <a href="https://www.linkedin.com/pulse/i-thought-coding-hard-until-tried-paolo-ib%C3%A1%C3%B1ez-medina-efkpc/?trackingId=wNWQ8UgoQBqW%2BOrU5J48XQ%3D%3D" target="_blank" class="btn btn-primary">See More</a>
         </div>
     </div>
 
@@ -201,7 +49,7 @@ p {
                 <h3><a target="_blank">
                     The Intersection of IT and Business</a></h3>
                 <p>Understanding how IT and business work together for success.</p>
-                <a href="https://www.linkedin.com/pulse/intersection-business-why-both-skills-matter-paolo-ib%C3%A1%C3%B1ez-medina-tgmtc/?trackingId=fQe2Z1QPQvSAmlEXdQqrKA%3D%3D" target="_blank" class="see-more-btn">See More</a>
+                <a href="https://www.linkedin.com/pulse/intersection-business-why-both-skills-matter-paolo-ib%C3%A1%C3%B1ez-medina-tgmtc/?trackingId=fQe2Z1QPQvSAmlEXdQqrKA%3D%3D" target="_blank" class="btn btn-primary">See More</a>
             </div>
         </div>
 
@@ -212,7 +60,7 @@ p {
                 <h3><a target="_blank">
                     Navigating the Future of Supply Chain Management</a></h3>
                 <p>Exploring how technology and sustainability are shaping supply chain management.</p>
-                <a href="https://www.linkedin.com/pulse/navigating-future-supply-chain-management-technology-ib%C3%A1%C3%B1ez-medina-edlhc/?trackingId=HHBIeYWLSSWByE0KUzROqw%3D%3D" target="_blank" class="see-more-btn">See More</a>
+                <a href="https://www.linkedin.com/pulse/navigating-future-supply-chain-management-technology-ib%C3%A1%C3%B1ez-medina-edlhc/?trackingId=HHBIeYWLSSWByE0KUzROqw%3D%3D" target="_blank" class="btn btn-primary">See More</a>
             </div>
         </div>
 
@@ -223,7 +71,7 @@ p {
                 <h3><a target="_blank">
                     The Blueprint to Success: Business Plans</a></h3>
                 <p>Why business plans are crucial and how to apply them effectively.</p>
-                <a href="https://www.linkedin.com/pulse/blueprint-success-importance-business-plan-how-apply-ib%C3%A1%C3%B1ez-medina-vztxc/?trackingId=tUDZNf5NSWmphjAzbH1IAA%3D%3D" target="_blank" class="see-more-btn">See More</a>
+                <a href="https://www.linkedin.com/pulse/blueprint-success-importance-business-plan-how-apply-ib%C3%A1%C3%B1ez-medina-vztxc/?trackingId=tUDZNf5NSWmphjAzbH1IAA%3D%3D" target="_blank" class="btn btn-primary">See More</a>
             </div>
         </div>
 
@@ -234,7 +82,7 @@ p {
                 <h3><a target="_blank">
                     Starting Steps of Building an E-Commerce Platform</a></h3>
                 <p>A guide to launching an effective online store.</p>
-                <a href="https://www.linkedin.com/pulse/starting-steps-building-effective-e-commerce-platform-ib%C3%A1%C3%B1ez-medina-moepc/?trackingId=BPmHAONESoGZ0nsokw2HRw%3D%3D" target="_blank" class="see-more-btn">See More</a>
+                <a href="https://www.linkedin.com/pulse/starting-steps-building-effective-e-commerce-platform-ib%C3%A1%C3%B1ez-medina-moepc/?trackingId=BPmHAONESoGZ0nsokw2HRw%3D%3D" target="_blank" class="btn btn-primary">See More</a>
             </div>
         </div>
     </div>
@@ -244,5 +92,10 @@ p {
 
 
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        AOS.init();
+        setupDarkMode();
+    </script>
 </body>
 </html>
