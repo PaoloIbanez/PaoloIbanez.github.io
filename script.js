@@ -6,7 +6,7 @@ function getHead() {
         <meta name="keywords" content="Paolo Ibanez, IT, business, cybersecurity, web development, Python, programming, e-commerce">
         <meta name="author" content="Paolo Ibanez Medina">
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Lora:wght@400;700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lora:wght@400;700&display=swap">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
         <link href="./styles.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
@@ -53,7 +53,7 @@ function getHeader() {
                         <li class="nav-item"><a class="nav-link" href="interests.html">Interests</a></li>
                         <li class="nav-item"><a class="nav-link" href="tracker.html">Goal Tracker</a></li>
                     </ul>
-                    <button id="darkToggle" class="btn btn-sm btn-outline-light ms-lg-3" type="button">Dark Mode</button>
+                    <button id="themeToggle" class="btn btn-primary btn-sm ms-lg-3" type="button">Dark Mode</button>
                 </div>
             </div>
         </nav>
@@ -94,18 +94,15 @@ function getFooter() {
     `);
 }
 
-function setupDarkMode() {
-    const toggle = document.getElementById('darkToggle');
+function setupTheme() {
+    const toggle = document.getElementById('themeToggle');
+    const stored = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', stored);
     if (!toggle) return;
-    if (localStorage.getItem('dark-mode') === 'enabled') {
-        document.body.classList.add('dark-mode');
-    }
     toggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        if (document.body.classList.contains('dark-mode')) {
-            localStorage.setItem('dark-mode', 'enabled');
-        } else {
-            localStorage.setItem('dark-mode', 'disabled');
-        }
+        const current = document.documentElement.getAttribute('data-theme');
+        const next = current === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
     });
 }
